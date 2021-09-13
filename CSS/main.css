@@ -1,0 +1,220 @@
+@charset "utf-8";
+
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+
+img, object,embed,video {
+	max-width: 100%;
+           }
+
+/* IE 6 does not support max-width so default to width 100% */
+
+/*
+.ie6 img {
+	width:100%;
+}
+*/
+#rightbar img,#leftbar img{box-shadow:10px 10px 10px gray;margin:5px;transition:0.5s;cursor:pointer;}
+#article h1 img,#header h1 img{border-radius:70px;}
+#article h1{color:#D34E1B;}
+#article h2{color:#067839;}
+#article p{color:#1FB70D;}
+#leftbar img:hover{border-radius:90px;}
+
+
+
+
+
+
+div{border:1px red solid;}
+
+#myslider{margin:-2px;width:500%;background:black;height:450px;}
+#myslider img{margin:-2px;height:65%;width:20%;position:relative;animation:sk 8s infinite;overflow:hidden;}
+
+
+
+/* Creating Menu */
+#navbar:hover{width:95%;}
+#navbar #m{text-align:left;float:left;cursor:pointer;cellspacing:0px;}
+
+#navbar:hover ol li{transition:0.50s;cursor:pointer;left:-40px;}
+#navbar ol{margin-top:35px;}
+#navbar ol li{transition:0.50s;width:100%;font-size:20px;text-align:center;list-style:none;position:relative;padding:20px;background:#FFC300;left:-500px}
+
+#navbar ol li:hover{left:-40px;background:#99ff99;border-bottom:7px #009900 ridge;box-shadow:5px 5px 10px black;}
+
+
+
+
+
+/* Mobile Layout: 480px and below. */
+
+#gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width:95%;
+	background:#BB8FCE;
+        display:block;
+        padding:2px;
+             }
+
+
+#header{
+	width:100%;
+        height:80px;
+	display:block;
+        overflow:hidden;
+       }
+
+#navbar {
+	width:95%;
+        height:20px;
+        padding:5px;
+        margin:2px;
+	display: block;
+        text-align:center;
+         }
+
+
+
+#leftbar {
+         width:95%;
+         padding:2%;
+	 display:block;
+         height:auto;
+         clear:both;
+         text-align:justify;
+ 
+         }
+#article {
+	 width:95%;
+         padding:2%;
+	 display:block;
+         height:auto;
+         clear:both;
+         text-align:justify;font-size:15px;font-family:verdana;color:gray;
+
+            }
+#rightbar {
+          width:95%;
+         padding:2%;
+	 display:block;
+        height:auto;
+         clear:both;	
+          }
+#footer {
+	 width:95%;
+         padding:2%;
+	 display:block;
+         height:50px;
+         clear:both;
+         color:white;background:black;
+        text-align:center;
+        }
+#footer #col2,#col3{display:none;}
+#footer #col1{line-height:0;}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px)
+ {
+	#gridContainer {
+	width: 95%;
+	padding-left: 1%;
+	padding-right:1%;
+        background:#EC7063 ;
+         
+     }
+
+#header{
+	height:200px;
+	display: block;
+       }
+
+#navbar {
+	text-align:left;
+	display: block;
+        height:40px;
+         }
+#navbar #m{display:none;}
+#navbar ol li {display:inline;left:0px;padding:5px;margin-left:-10px;}
+#navbar ol{margin-top:6px;}
+#leftbar {
+	clear:none;
+         width:10%;
+         float:left;
+         }
+#article {
+	clear:none;
+        width:95%;
+            }
+#rightbar {
+	   width:95%;
+           height:auto;
+          }
+#footer {
+	 height:100px;
+        }
+
+
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout.//#FF5733 */
+
+@media only screen and (min-width: 769px) 
+{
+#gridContainer {
+	width: 95%;
+	max-width:1232px;
+	padding-left:0.20%;
+	padding-right:0.0%;
+	margin: auto;
+        background: #FFA07A;
+       }
+
+#header{
+	 width:100%;
+         height:400px;
+	display: block;
+        clear:none;
+       }
+
+#navbar {
+	clear:none;
+        width:60%;
+	display: block;
+         text-align:center;
+         margin:auto;
+         height:auto;
+         }
+#navbar ol li{padding:15px;}
+#navbar ol{margin-top:10px;}
+#leftbar {
+	width:10%;float:left;
+        margin:0.20%;
+         }
+#article {
+	float:left;width:71%;clear:none;margin:0.20%;
+            }
+#rightbar {
+	   float:left;
+           width:5%;
+           margin:0.20%;
+          clear:none;
+           height:400px;
+          }
+#footer {
+height:200px;
+        }
+
+#footer #col2,#col3{display:block;line-height:222%;}
+#footer #col3{line-height:20%;}
+
+
+#ftable{margin:5px;width:100%;margin-top:-20px}
+#col3{width:55%}
+#col1{height:200px;}
+
+}
